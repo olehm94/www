@@ -5,13 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <noscript>JS not working</noscript>
 
-    <button ondblclick="btnClick()" onclick="btnOneClick()">Push me</button>
-    
+    <form id="myform">
+        <input type="text"  name="username" placeholder="Input name"><br>
+        <input type="email" name="email" placeholder="Input emale"><br>
+        <input type="password" name="password" placeholder="Input password"><br>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <span id="error"></span>
+        <button>SEND</button>
+    </form>
+
     <script src="JS/index.js"></script>
 </body>
 

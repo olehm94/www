@@ -1,35 +1,23 @@
-document.getElementById('myform').addEventListener('submit', function(e){
-    e.preventDefault();
-    
-    var el = document.getElementById('myform');
+class Person {
+    name = ''
+    age = 0
+    bio = ''
 
-    var username = el.username.value;
-    var email = el.email.value;
-    var pass = el.password.value;
-    var gender = el.gender.value;
-    console.log(username);
-
-
-    var error = '';
-    if(username.length < 2)
-        error = 'Name to short';
-    else if(email.length < 2)
-        error = 'Male addres to short';
-    else if(!email.includes('@'))
-        error = '@ missing';
-    else if(pass.length < 2)
-        error = 'passwor to short';
-    else if(gender == null || gender == '')
-        error = 'Gender unknown';
-
-    if(error != '') {
-        document.getElementById('error').innerText = error;
-        return false;
+    constructor(name, age, bio) {
+        this.name = name
+        this.age = age
+        this.bio = bio
     }
 
-    document.getElementById('error').innerText = '';
+    info() {
+        console.log("Людина" + this.name + ".Вік" + this.age + ".Bio" + this.bio);
+    }
+}
 
-    window.location = 'https://www.copart.com/'
+var alex = new Person('Alex', 25, 'Some bio');
 
-    return false;
-});
+var bob = new Person('Bob', 30, 'Some new bio');
+
+
+alex.info();
+bob.info();

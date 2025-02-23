@@ -1,11 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    color: #f31717;
+    font-size: 40px;
 }
 
 body{
-    background-color: #333;
+    background-color: #430adf;
 }
 
 
@@ -26,7 +27,7 @@ input:focus {
 
 button {
     position: absolute;
-    top:50%;
+    top: 50%;
     background-color:#0a0ef5;
     color: #fff;
     border:none;
